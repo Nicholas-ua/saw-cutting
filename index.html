@@ -160,7 +160,7 @@
                 </tbody>
             </table>
 
-            <p>Введіть поправковий коефіцієнт кут різання A_d:<label><input type="number" name="A_d"></label></p>
+            <p>Введіть поправковий коефіцієнт на кут різання A_d:<label><input type="number" name="A_d"></label></p>
             <table border="2" align="center">
                 <tbody>
                     <tr>
@@ -231,7 +231,14 @@
                 </tbody>
             </table>
         </div>
-
     </div>
+
+    <br>
+
+    <div class="run"> 
+        <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Розрахувати швидкість подачі</button>
+    </div>
+
+    <p id="demo"></p>
 </body>
 </html>

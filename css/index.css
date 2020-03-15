@@ -10,3 +10,8 @@ body {
 h2 {
     text-align: center;
 }
+
+.run{
+    display: flex;
+	justify-content: center;
+}
