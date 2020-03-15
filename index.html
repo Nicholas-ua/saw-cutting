@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Saw cutting</title>
+</head>
+<body>
+    <h2>Розрахунок режимів різання дисковими пилами</h2>
+    <div class="input_value">
+        <div id="input_koeficients">
+            <p>Введіть коефіцієнт С:<label><input type="number" name="koef_C"/></label></p>
+            
+            <p>Введіть коефіцієнт x:<label><input type="number" name="koef_x"/></label></p>
+            
+            <p>Введіть коефіцієнт y:<label><input type="number" name="koef_y"/></label></p>
+            
+            <p>Введіть коефіцієнт q:<label><input type="number" name="koef_q"/></Label></p>
+            
+        </div>
+
+        <div id="values">
+            <p>Введіть потужність двигуна механізму різання Nd, кВт:<label><input type="number" name="Nd"></label></p>
+
+            <p>Введіть ККД механізму різання:<label><input type="number" name="KKD"></label></p>
+            
+            <p>Введіть висоту пропилу h, мм:<label><input type="number" name="h"></label></p>
+            
+            <p>Введіть ширину пропилу b, мм:<label><input type="number" name="b"></label></p>
+
+            <p>Введіть частоту обертання пил n, об/хв:<label><input type="number" name="n"></label></p>
+
+            <p>Введіть кількість зубів пили z, шт:<label><input type="number" name="z"></label></p>
+
+            <p>Введіть кількість пил i, шт:<label><input type="number" name="i"></label></p>
+
+        </div>
+
+        <div id="Apopr">
+            <p>Введіть поправковий коефіцієнт на породу А_породи:<label><input type="number" name="A_por"></label></p>
+
+            <table border="2" align="center"> 
+                <tbody>
+                    <tr>
+                        <th>Порода деревини</th>
+                        <th width="50"><em> Aп </em></th>
+                    </tr>
+                    <tr>
+                        <td>Липа</td><td> 0,8 </td>
+                    </tr>
+                    <tr>
+                        <td>Осика</td><td> 0,85 </td>
+                    </tr>
+                    <tr>
+                        <td>Сосна</td><td> 1,00 </td>
+                    </tr>
+                    <tr>
+                        <td>Ялина</td><td> 0,95 </td>
+                    </tr>
+                    <tr>
+                        <td>Вільха</td><td> 1,05 </td>
+                    </tr>
+                    <tr>
+                        <td>Модрина</td><td> 1,10 </td>
+                    </tr><tr>
+                        <td>Береза</td><td> 1,25 </td>
+                    </tr>
+                    <tr>
+                        <td>Бук</td><td> 1,40 </td>
+                    </tr>
+                    <tr>
+                        <td>Дуб</td><td> 1,55 </td>
+                    </tr>
+                    <tr>
+                        <td>Ясен</td><td> 1,75 </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Введіть поправковий коефіцієнт на вологість Aw:<label><input type="number" name="Aw"></label></p>
+            <table border="2" align="center">
+                <tbody>
+                    <tr>
+                        <th>Деревина</th>
+                        <th>Вологість W, %</th>
+                        <th width="50px"> Aw </th>
+                    </tr>
+                    <tr>
+                        <td>Проварена</td><td>70</td><td>0,87</td>
+                    </tr>
+                    <tr>
+                        <td>Сира</td><td>50...70</td><td>0,89</td>
+                    </tr>
+                    <tr>
+                        <td>Напівсуха</td><td>20...30</td><td>0,93</td>
+                    </tr>
+                    <tr>
+                        <td>Суха</td><td>10...15</td><td>1,00</td>
+                    </tr>
+                    <tr>
+                        <td>Дуже суха</td><td>5...8</td><td>1,10</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Введіть поправковий коефіцієнт на затуплення лез A_r:<label><input type="number" name="A_r"></label></p>
+            <table border="2" align="center">
+                <tbody>
+                    <tr>
+                        <th>Тривалість роботи інструмента (сталевого) після загострення Т, хв</th>
+                        <th width="50"><em>A_r</em></th>
+                    </tr>
+                    <tr>
+                        <td>0</td><td>1,00</td>
+                    </tr>
+                    <tr>
+                        <td>60</td><td>1,30</td>
+                    </tr>
+                    <tr>
+                        <td>120</td><td>1,50</td>
+                    </tr>
+                    <tr>
+                        <td>180</td><td>1,80</td>
+                    </tr>
+                    <tr>
+                        <td>240</td><td>2,20</td>
+                    </tr><tr>
+                        <td>300</td><td>2,50</td>
+                    </tr>
+                    <tr>
+                        <td>360</td><td>2,80</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Введіть поправковий коефіцієнт на висоту пропилу A_h:<label><input type="number" name="A_r"></label></p>
+            <table border="2" align="center">
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+</html>
