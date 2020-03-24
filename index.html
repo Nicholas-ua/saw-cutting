@@ -4,41 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    
     <title>Saw cutting</title>
 </head>
 <body>
     <h2>Розрахунок режимів різання дисковими пилами</h2>
     <div class="input_value">
         <div id="input_koeficients">
-            <p>Введіть коефіцієнт С:<label><input type="number" name="koef_C"/></label></p>
+            <p>Введіть коефіцієнт С: <input type="number" id="koef_C" value="7"></p>
             
-            <p>Введіть коефіцієнт x:<label><input type="number" name="koef_x"/></label></p>
+            <p>Введіть коефіцієнт x: <input type="number" id="koef_x" value="0.4"></p>
             
-            <p>Введіть коефіцієнт y:<label><input type="number" name="koef_y"/></label></p>
+            <p>Введіть коефіцієнт y:<label><input type="number" id="koef_y" value="-0.17"/></label></p>
             
-            <p>Введіть коефіцієнт q:<label><input type="number" name="koef_q"/></Label></p>
+            <p>Введіть коефіцієнт q:<label><input type="number" id="koef_q" value="0.0"/></Label></p>
             
         </div>
 
         <div id="values">
-            <p>Введіть потужність двигуна механізму різання Nd, кВт:<label><input type="number" name="Nd"></label></p>
+            <p>Введіть потужність двигуна механізму різання Nd, кВт:<label><input type="number" id="Nd" value="75"></label></p>
 
-            <p>Введіть ККД механізму різання:<label><input type="number" name="KKD"></label></p>
+            <p>Введіть ККД механізму різання:<label><input type="number" id="KKD" value="0.9"></label></p>
             
-            <p>Введіть висоту пропилу h, мм:<label><input type="number" name="h"></label></p>
+            <p>Введіть висоту пропилу h, мм:<label><input type="number" id="h" value="105"></label></p>
             
-            <p>Введіть ширину пропилу b, мм:<label><input type="number" name="b"></label></p>
+            <p>Введіть ширину пропилу b, мм:<label><input type="number" id="b" value="4.2"></label></p>
 
-            <p>Введіть частоту обертання пил n, об/хв:<label><input type="number" name="n"></label></p>
+            <p>Введіть частоту обертання пил n, об/хв:<label><input type="number" id="n" value="3000"></label></p>
 
-            <p>Введіть кількість зубів пили z, шт:<label><input type="number" name="z"></label></p>
+            <p>Введіть кількість зубів пили z, шт:<label><input type="number" id="z" value="16"></label></p>
 
-            <p>Введіть кількість пил i, шт:<label><input type="number" name="i"></label></p>
+            <p>Введіть кількість пил i, шт:<label><input type="number" id="i" value="10"></label></p>
 
         </div>
 
         <div id="Apopr">
-            <p>Введіть поправковий коефіцієнт на породу А_породи:<label><input type="number" name="A_por"></label></p>
+            <p>Введіть поправковий коефіцієнт на породу Ап:<label><input type="number" id="A_por" value="1.00"></label></p>
 
             <table border="2" align="center"> 
                 <tbody>
@@ -78,7 +79,7 @@
                 </tbody>
             </table>
 
-            <p>Введіть поправковий коефіцієнт на вологість Aw:<label><input type="number" name="Aw"></label></p>
+            <p>Введіть поправковий коефіцієнт на вологість Aw:<label><input type="number" id="A_w" value="0.93"></label></p>
             <table border="2" align="center">
                 <tbody>
                     <tr>
@@ -104,12 +105,12 @@
                 </tbody>
             </table>
 
-            <p>Введіть поправковий коефіцієнт на затуплення лез A_r:<label><input type="number" name="A_r"></label></p>
+            <p>Введіть поправковий коефіцієнт на затуплення лез Ar:<label><input type="number" id="A_r" value="1.00"></label></p>
             <table border="2" align="center">
                 <tbody>
                     <tr>
                         <th>Тривалість роботи інструмента (сталевого) після загострення Т, хв</th>
-                        <th width="50"><em>A_r</em></th>
+                        <th width="50"><em>Ar</em></th>
                     </tr>
                     <tr>
                         <td>0</td><td>1,00</td>
@@ -134,7 +135,7 @@
                 </tbody>
             </table>
 
-            <p>Введіть поправковий коефіцієнт на висоту пропилу A_h:<label><input type="number" name="A_r"></label></p>
+            <p>Введіть поправковий коефіцієнт на висоту пропилу Ah:<label><input type="number" id="A_h" value="1.11"></label></p>
             <table border="2" align="center">
                 <tbody>
                     <tr>
@@ -148,7 +149,7 @@
                         <td>80</td>
                     </tr>
                     <tr>
-                        <th><em>A_h</em></th>
+                        <th><em>Ah</em></th>
                         <td>0,84</td>
                         <td>0,90</td>
                         <td>0,95</td>
@@ -160,12 +161,12 @@
                 </tbody>
             </table>
 
-            <p>Введіть поправковий коефіцієнт на кут різання A_d:<label><input type="number" name="A_d"></label></p>
+            <p>Введіть поправковий коефіцієнт на кут різання Ad:<label><input type="number" id="A_d" value="1.00"></label></p>
             <table border="2" align="center">
                 <tbody>
                     <tr>
                         <th>Кут різання d, градуси</th>
-                        <th><em>A_d</em></th>
+                        <th><em>Ad</em></th>
                     </tr>
                     <tr>
                         <td>50</td><td>0,78</td>
@@ -194,12 +195,12 @@
                 </tbody>
             </table>
 
-            <p>Введіть поправковий коефіцієнт на швидкість різання A_v:<label><input type="number" name="A_v"></label></p>
+            <p>Введіть поправковий коефіцієнт на швидкість різання Av:<label><input type="number" id="A_v" value="1.00"></label></p>
             <table border="2" align="center">
                 <tbody>
                     <tr>
                         <th>Швидкість різання v, м/с</th>
-                        <th><em>A_v</em></th>
+                        <th><em>Av</em></th>
                     </tr>
                     <tr>
                         <td>20</td><td>1,07</td>
@@ -236,9 +237,12 @@
     <br>
 
     <div class="run"> 
-        <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Розрахувати швидкість подачі</button>
+        <button onclick="calcVs()">Розрахувати швидкість подачі</button>
+        
     </div>
 
-    <p id="demo"></p>
+    <p id="Vs"></p>
+
+    <script src="js/index.js"></script>
 </body>
 </html>
