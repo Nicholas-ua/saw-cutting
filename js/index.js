@@ -24,3 +24,10 @@ function calcVs() {
     
     document.getElementById("Vs").innerHTML = "Швидкість подачі за потужністю становить не більше " + Vs.toFixed(2) + " м/хв.";
 }
+
+function calcVr() {
+    var D = document.getElementById("D").value;
+    var n = document.getElementById("n").value;
+    var Vr = Math.PI * D * n / 60000;
+    document.getElementById("Vr").innerHTML = "Швидкість різання становить " + Vr.toFixed(2) + " м/с";
+}

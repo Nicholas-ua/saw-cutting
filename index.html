@@ -11,7 +11,7 @@
     <h2>Розрахунок режимів різання дисковими пилами</h2>
     <div class="input_value">
         <div id="input_koeficients">
-            <p>Введіть коефіцієнт С: <input type="number" id="koef_C" value="7"></p>
+            <p>Введіть коефіцієнт С: <input type="number" id="koef_C" value="11"></p>
             
             <p>Введіть коефіцієнт x: <input type="number" id="koef_x" value="0.4"></p>
             
@@ -27,14 +27,16 @@
             <p>Введіть ККД механізму різання:<label><input type="number" id="KKD" value="0.9"></label></p>
             
             <p>Введіть висоту пропилу h, мм:<label><input type="number" id="h" value="105"></label></p>
+
+            <p>Введіть діаметр пил D, мм:<label><input type="number" id="D" value="350"></label></p>
             
-            <p>Введіть ширину пропилу b, мм:<label><input type="number" id="b" value="4.2"></label></p>
+            <p>Введіть ширину пропилу b, мм:<label><input type="number" id="b" value="4.3"></label></p>
 
             <p>Введіть частоту обертання пил n, об/хв:<label><input type="number" id="n" value="3000"></label></p>
 
             <p>Введіть кількість зубів пили z, шт:<label><input type="number" id="z" value="16"></label></p>
 
-            <p>Введіть кількість пил i, шт:<label><input type="number" id="i" value="10"></label></p>
+            <p>Введіть кількість пил i, шт:<label><input type="number" id="i" value="14"></label></p>
 
         </div>
 
@@ -79,7 +81,7 @@
                 </tbody>
             </table>
 
-            <p>Введіть поправковий коефіцієнт на вологість Aw:<label><input type="number" id="A_w" value="0.93"></label></p>
+            <p>Введіть поправковий коефіцієнт на вологість Aw:<label><input type="number" id="A_w" value="0.89"></label></p>
             <table border="2" align="center">
                 <tbody>
                     <tr>
@@ -196,6 +198,12 @@
             </table>
 
             <p>Введіть поправковий коефіцієнт на швидкість різання Av:<label><input type="number" id="A_v" value="1.00"></label></p>
+            
+            <div class="runVr">
+                <button onclick="calcVr()">Розрахувати швидкість різання</button>
+                <p id="Vr">Швидкість різання становить </p>
+            </div>
+
             <table border="2" align="center">
                 <tbody>
                     <tr>
@@ -238,10 +246,9 @@
 
     <div class="run"> 
         <button onclick="calcVs()">Розрахувати швидкість подачі</button>
-        
     </div>
 
-    <p id="Vs"></p>
+    <p id="Vs">Швидкість подачі становить не більше </p>
 
     <script src="js/index.js"></script>
 </body>
