@@ -23,11 +23,24 @@ function calcVs() {
     var Vs = Math.pow(60000*Math.pow(1000, x)*Nd*KKD/(C*Apopr*Math.pow(h, (1-y))*Math.pow(b, (1-q))*i*Math.pow((n*z), x)), (1/(1-x)));
     
     document.getElementById("Vs").innerHTML = "Швидкість подачі за потужністю становить не більше " + Vs.toFixed(2) + " м/хв.";
+
+    return Vs;
 }
+
+var Vs = calcVs();
 
 function calcVr() {
     var D = document.getElementById("D").value;
     var n = document.getElementById("n").value;
     var Vr = Math.PI * D * n / 60000;
     document.getElementById("Vr").innerHTML = "Швидкість різання становить " + Vr.toFixed(2) + " м/с";
+}
+
+
+
+function calcSz() {
+    var n = document.getElementById("n").value;
+    var z = document.getElementById("z").value;
+    var Sz = Vs * 1000/(n * z);
+    document.getElementById("Sz").innerHTML = "Подача на зуб становить Sz = " + Sz.toFixed(2) + " мм";
 }

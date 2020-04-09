@@ -11,7 +11,7 @@
     <h2>Розрахунок режимів різання дисковими пилами</h2>
     <div class="input_value">
         <div id="input_koeficients">
-            <p>Введіть коефіцієнт С: <input type="number" id="koef_C" value="11"></p>
+            <p>Введіть коефіцієнт С: <input type="number" id="koef_C" value="7"></p>
             
             <p>Введіть коефіцієнт x: <input type="number" id="koef_x" value="0.4"></p>
             
@@ -32,7 +32,7 @@
             
             <p>Введіть ширину пропилу b, мм:<label><input type="number" id="b" value="4.3"></label></p>
 
-            <p>Введіть частоту обертання пил n, об/хв:<label><input type="number" id="n" value="3000"></label></p>
+            <p>Введіть частоту обертання пил n, об/хв:<label><input type="number" id="n" value="3700"></label></p>
 
             <p>Введіть кількість зубів пили z, шт:<label><input type="number" id="z" value="16"></label></p>
 
@@ -163,7 +163,7 @@
                 </tbody>
             </table>
 
-            <p>Введіть поправковий коефіцієнт на кут різання Ad:<label><input type="number" id="A_d" value="1.00"></label></p>
+            <p>Введіть поправковий коефіцієнт на кут різання Ad:<label><input type="number" id="A_d" value="1.34"></label></p>
             <table border="2" align="center">
                 <tbody>
                     <tr>
@@ -246,9 +246,16 @@
 
     <div class="run"> 
         <button onclick="calcVs()">Розрахувати швидкість подачі</button>
+        
     </div>
 
-    <p id="Vs">Швидкість подачі становить не більше </p>
+    <p id="Vs">Швидкість подачі за потужністю двигуна різання становить не більше </p>
+
+    <div class="runSz"> 
+        <button onclick="calcSz()">Розрахувати подачу на зуб Sz</button>
+    </div>
+
+    <p id="Sz">Подача на зуб становить Sz = </p>
 
     <script src="js/index.js"></script>
 </body>
