@@ -8,9 +8,9 @@
     <title>Saw cutting</title>
 </head>
 <body>
-    <h2>Розрахунок режимів різання дисковими пилами</h2>
+    <h2>Розрахунок режимів різання дисковими пилами з пластинами твердого сплаву (гострими)</h2>
     <div class="input_value">
-        <div id="input_koeficients">
+        <!--<div id="input_koeficients">
             <p>Введіть коефіцієнт С: <input type="number" id="koef_C" value="7"></p>
             
             <p>Введіть коефіцієнт x: <input type="number" id="koef_x" value="0.4"></p>
@@ -19,7 +19,7 @@
             
             <p>Введіть коефіцієнт q:<label><input type="number" id="koef_q" value="0.0"/></Label></p>
             
-        </div>
+        </div>-->
 
         <div id="values">
             <p>Введіть потужність двигуна механізму різання Nd, кВт:<label><input type="number" id="Nd" value="75"></label></p>
@@ -107,7 +107,7 @@
                 </tbody>
             </table>
 
-            <p>Введіть поправковий коефіцієнт на затуплення лез Ar:<label><input type="number" id="A_r" value="1.00"></label></p>
+            <!--<p>Введіть поправковий коефіцієнт на затуплення лез Ar:<label><input type="number" id="A_r" value="1.00"></label></p>
             <table border="2" align="center">
                 <tbody>
                     <tr>
@@ -135,7 +135,7 @@
                         <td>360</td><td>2,80</td>
                     </tr>
                 </tbody>
-            </table>
+            </table>-->
 
             <p>Введіть поправковий коефіцієнт на висоту пропилу Ah:<label><input type="number" id="A_h" value="1.11"></label></p>
             <table border="2" align="center">
@@ -200,14 +200,14 @@
             <p>Введіть поправковий коефіцієнт на швидкість різання Av:<label><input type="number" id="A_v" value="1.00"></label></p>
             
             <div class="runVr">
-                <button onclick="calcVr()">Розрахувати швидкість різання</button>
-                <p id="Vr">Швидкість різання становить </p>
+                <button onclick="calcVr()">Розрахувати швидкість різання Vr</button>
+                <p id="Vr">Швидкість різання Vr =</p>
             </div>
 
             <table border="2" align="center">
                 <tbody>
                     <tr>
-                        <th>Швидкість різання v, м/с</th>
+                        <th>Швидкість різання Vr, м/с</th>
                         <th><em>Av</em></th>
                     </tr>
                     <tr>
@@ -242,8 +242,8 @@
         </div>
         <br>
         <div class="runVs"> 
-        <button onclick="calcVs()">Розрахувати швидкість подачі</button>
-        <p id="Vs">Швидкість подачі становить </p>
+        <button onclick="calcVs()">Розрахувати швидкість подачі Vs</button>
+        <p id="Vs">Швидкість подачі за потужністю Vs =</p>
     </div>
     </div>
 
@@ -253,7 +253,7 @@
         <button onclick="calcSz()">Розрахувати подачу на зуб Sz</button>
     </div>
 
-    <p id="Sz"></p>
+    <p id="Sz">Подача на зуб становить</p>
 
     <script src="js/index.js"></script>
 </body>
