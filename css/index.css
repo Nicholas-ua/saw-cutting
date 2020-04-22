@@ -17,15 +17,24 @@ h2 {
 	justify-content: center;
 }
 
-.runSz{
+#phone{
+    background-color: green;
+    font-size: 100%;
+    border: 2px solid black;
+}
+
+#phone:hover{
+    border: 2px solid red;
+}
+/*.runSz{
     display: flex;
     justify-content: center;
-}
+}*/
 
 /*#Vs{
     text-align: center;
 }*/
 
-#Sz{
+/*#Sz{
     text-align: center;
-}
+}*/
