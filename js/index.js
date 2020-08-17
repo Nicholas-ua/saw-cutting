@@ -1,5 +1,20 @@
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-    var C = 7;
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+
+//for calculation
+var C = 7;
     var x = 0.4;
     var y = -0.17;
     var q = 0.0;
@@ -58,4 +73,51 @@ function calcSz() {
     var Sz = Vs * 1000/(n * z);
     
     document.getElementById("Sz").innerHTML = "Подача на зуб становить Sz = " + Sz.toFixed(2) + " мм";
+}
+
+function calcUpFi() {
+  var upperX = document.getElementById("upper_x").value;
+  var upperH = document.getElementById("upper_h").value;
+  var upperR = document.getElementById("upper_R").value;
+
+  if(upperR && upperX && upperH != 0)
+  {
+    var upperFi = Math.acos((upperX-upperH)/upperR)*180/Math.PI;
+    document.getElementById("upFi").innerHTML = "<i>&#966<sub>вих</sub> = </i>" + upperFi.toFixed(2) + " град.";
+  }
+  else
+  {
+    document.getElementById("upFi").innerHTML = "Введіть всі значення!";
+  }
+}
+
+function calcLowFi() {
+  var lowerX = document.getElementById("lower_x").value;
+  var lowerR = document.getElementById("lower_R").value;
+
+  if(lowerR && lowerX !=0)
+  {
+    var lowerFi = Math.acos(lowerX/lowerR) * 180/Math.PI;
+    document.getElementById("lowFi").innerHTML = "<i>&#966<sub>вих</sub> = </i>" + lowerFi.toFixed(2) + " град.";
+  }
+  else
+  {
+    document.getElementById("lowFi").innerHTML = "Введіть всі значення!";
+  }
+}
+
+function calcVsRm() {
+  var SzRm = document.getElementById("SzRm").value;
+  var zRm = document.getElementById("zRm").value;
+  var nRm = document.getElementById("nRm").value;
+
+  if(SzRm && zRm && nRm != 0)
+  {
+    var VsRm = (SzRm*zRm*nRm)/1000;
+    document.getElementById("Vs_Rm").innerHTML = "<i>Vs<sub>Rm</sub> = </i>" + VsRm.toFixed(2) + " м/хв.";
+  }
+  else
+  {
+    document.getElementById("Vs_Rm").innerHTML = "Введіть всі значення!";
+  }
 }
