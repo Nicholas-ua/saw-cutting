@@ -121,3 +121,19 @@ function calcVsRm() {
     document.getElementById("Vs_Rm").innerHTML = "Введіть всі значення!";
   }
 }
+
+function calcZ() {
+  var wantedVs = document.getElementById("Vs_wanted").value;
+  var wantedSz = document.getElementById("Sz_wanted").value;
+  var wantedN = document.getElementById("n_wanted").value;
+
+  if(wantedVs && wantedSz && wantedN != 0)
+  {
+    var z = wantedVs*1000/(wantedSz*wantedN);
+    document.getElementById("Z").innerHTML = "<i>z = </i>" + z.toFixed(1) + " шт.";
+  }
+  else
+  {
+    document.getElementById("Z").innerHTML = "Введіть всі значення!";
+  }
+}

@@ -9,6 +9,21 @@
 </head>
 <body>
     <h2>Розрахунок режимів різання дисковими пилами з пластинами твердого сплаву (гострими)</h2>
+
+    <button class="accordion">Розрахунок кількості зубів пил z</button>
+    <div class="panel">
+        <h4>Рекомендовані значення <i>S<sub>z</sub></i></h4>
+        
+        <p><i>S<sub>z</sub></i> = 0.2-0.3 мм/зуб - для м'яких порід;</p>
+        <p><i>S<sub>z</sub></i> = 0.06-0.15 мм/зуб - для твердих порід.</p>
+        <p>Введіть бажану швидкість подачі <i>Vs</i>, м/хв:<label><input type="number" id="Vs_wanted" value="10"></label></p>
+        <p>Введіть бажану подачу на зуб Sz, мм:<label><input type="number" id="Sz_wanted" value="0.2"></label></p>
+        <p>Введіть частоту обертання пил <i>n</i>, об/хв:<label><input type="number" id="n_wanted" value="2970"></label></p>
+        <button onclick="calcZ()">Розрахувати</button>
+        <p id="Z"><i>z = </i></p>
+    </div>
+    <br>
+
     <button class="accordion">Розрахунок швидкості подачі <i>V<sub>s</sub></i> від потужності двигуна механізму різання</button>
     <div class="panel">
         <div class="input_value">
