@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="icon" type="image/png" sizes="70x70" href="images/fav-icon-70x70.png"/>
+    <link rel="icon" type="image/png" sizes="200x200" href="images/fav-icon-200x200.jpg"/>
     <title>Saw cutting</title>
 </head>
 <body>
-    <h2>Розрахунок режимів різання дисковими пилами з пластинами твердого сплаву (гострими)</h2>
+    <h2>Розрахунок режимів поздовжнього різання дисковими пилами з пластинами твердого сплаву (гострими)</h2>
 
     <button class="accordion">Розрахунок кількості зубів пил z</button>
     <div class="panel">
@@ -283,22 +283,7 @@
         <p>Введіть R:<label><input type="number" id="upper_R" value="175"></label></p>
         <button onclick="calcUpFi()">Розрахувати</button>
         <p id="upFi"><i>&#966<sub>вих</sub> = </i></p>
-    </div>
 
-    <button class="accordion">Розрахунок <i>V<sub>s</sub></i> за шорсткістю <i>R<sub>m</sub></i> пропилу при 
-        нижньому розміщенні пил</button>
-    <div class="panel">
-        <h4>Визначення кута виходу <i>&#966<sub>вих</sub></i></h4>
-        <img src="images/Lower-saw.jpg" alt="Нижнє розміщення пил" style="width:100%">
-        <p><i>x</i> - відстань від центра обертання пили до поверхні стола, мм;</p>
-        <p><i>R</i> - радіус пили, мм.</p>
-        <p>Введіть x:<label><input type="number" id="lower_x" value="100"></label></p>
-        <p>Введіть R:<label><input type="number" id="lower_R" value="175"></label></p>
-        <button onclick="calcLowFi()">Розрахувати</button>
-        <p id="lowFi"><i>&#966<sub>вих</sub> = </i></p>
-    </div>
-
-    <div class="VsRm">
         <p>Максимально допустима подача на зуб Sz, мм для кутів виходу <i>&#966<sub>вих</sub></i></p>
         <table border="2" align="center">
             <tbody>
@@ -327,20 +312,69 @@
             </tbody>
         </table>
 
-        <p>Введіть Sz, мм:<label><input type="number" id="SzRm" value="0.75"></label></p>
-        <p>Введіть z, шт:<label><input type="number" id="zRm" value="24"></label></p>
-        <p>Введіть n, об/хв:<label><input type="number" id="nRm" value="3000"></label></p>
-        <button onclick="calcVsRm()">Розрахувати</button>
-        <p id="Vs_Rm"><i>Vs<sub>Rm</sub> = </i></p>
+        <p>Введіть Sz, мм:<label><input type="number" id="SzRmUp" value="0.75"></label></p>
+        <p>Введіть z, шт:<label><input type="number" id="zRmUp" value="24"></label></p>
+        <p>Введіть n, об/хв:<label><input type="number" id="nRmUp" value="3000"></label></p>
+        <button onclick="calcVsRmUp()">Розрахувати</button>
+        <p id="Vs_Rm_Up"><i>Vs<sub>Rm</sub> = </i></p>
+    </div>
 
-        <br>
+    <button class="accordion">Розрахунок <i>V<sub>s</sub></i> за шорсткістю <i>R<sub>m</sub></i> пропилу при 
+        нижньому розміщенні пил</button>
+    <div class="panel">
+        <h4>Визначення кута виходу <i>&#966<sub>вих</sub></i></h4>
+        <img src="images/Lower-saw.jpg" alt="Нижнє розміщення пил" style="width:100%">
+        <p><i>x</i> - відстань від центра обертання пили до поверхні стола, мм;</p>
+        <p><i>R</i> - радіус пили, мм.</p>
+        <p>Введіть x:<label><input type="number" id="lower_x" value="100"></label></p>
+        <p>Введіть R:<label><input type="number" id="lower_R" value="175"></label></p>
+        <button onclick="calcLowFi()">Розрахувати</button>
+        <p id="lowFi"><i>&#966<sub>вих</sub> = </i></p>
 
-        <span >
+        <p>Максимально допустима подача на зуб Sz, мм для кутів виходу <i>&#966<sub>вих</sub></i></p>
+        <table border="2" align="center">
+            <tbody>
+                <tr>
+                    <th>Висота нерівностей Rm<sub>max</sub>, мкм</th>
+                    <th>20</th><th>30</th><th>40</th><th>50</th><th>60</th><th>70</th>
+                </tr>
+                <tr>
+                    <td>1200</td><td>1,8</td><td>1,8</td><td>1,8</td><td>1,8</td><td>1,5</td><td>1,5</td>
+                </tr>
+                <tr>
+                    <td>800</td><td>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td><td>1,2</td><td>1,2</td>
+                </tr>
+                <tr>
+                    <td>500</td><td>1,2</td><td>1,2</td><td>1,2</td><td>1,2</td><td>0,75</td><td>0,75</td>
+                </tr>
+                <tr>
+                    <td>320</td><td>0,45</td><td>0,45</td><td>0,45</td><td>0,45</td><td>0,15</td><td>0,15</td>
+                </tr>
+                <tr>
+                    <td>200</td><td>0,15</td><td>0,15</td><td>0,15</td><td>0,15</td><td>0,07</td><td>0,07</td>
+                </tr>
+                <tr>
+                    <td>100</td><td>0,07</td><td>0,07</td><td>0,07</td><td>0,07</td><td>-</td><td>-</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Введіть Sz, мм:<label><input type="number" id="SzRmLow" value="0.75"></label></p>
+        <p>Введіть z, шт:<label><input type="number" id="zRmLow" value="24"></label></p>
+        <p>Введіть n, об/хв:<label><input type="number" id="nRmLow" value="3000"></label></p>
+        <button onclick="calcVsRmLow()">Розрахувати</button>
+        <p id="Vs_Rm_Low"><i>Vs<sub>Rm</sub> = </i></p>
+    </div>
+
+    <br>
+    <div class="call">
+        <span>
             <a href="tel:+380967447960">
                 <button id="phone">Подзвонити консультанту</button>
             </a>
         </span>
     </div>
+
     <br>
     <script src="js/index.js"></script>
 </body>

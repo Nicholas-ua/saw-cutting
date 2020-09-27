@@ -106,19 +106,35 @@ function calcLowFi() {
   }
 }
 
-function calcVsRm() {
-  var SzRm = document.getElementById("SzRm").value;
-  var zRm = document.getElementById("zRm").value;
-  var nRm = document.getElementById("nRm").value;
+function calcVsRmUp() {
+  var SzRm = document.getElementById("SzRmUp").value;
+  var zRm = document.getElementById("zRmUp").value;
+  var nRm = document.getElementById("nRmUp").value;
 
   if(SzRm && zRm && nRm != 0)
   {
     var VsRm = (SzRm*zRm*nRm)/1000;
-    document.getElementById("Vs_Rm").innerHTML = "<i>Vs<sub>Rm</sub> = </i>" + VsRm.toFixed(2) + " м/хв.";
+    document.getElementById("Vs_Rm_Up").innerHTML = "<i>Vs<sub>Rm</sub> = </i>" + VsRm.toFixed(2) + " м/хв.";
   }
   else
   {
-    document.getElementById("Vs_Rm").innerHTML = "Введіть всі значення!";
+    document.getElementById("Vs_Rm_Up").innerHTML = "Введіть всі значення!";
+  }
+}
+
+function calcVsRmLow() {
+  var SzRm = document.getElementById("SzRmLow").value;
+  var zRm = document.getElementById("zRmLow").value;
+  var nRm = document.getElementById("nRmLow").value;
+
+  if(SzRm && zRm && nRm != 0)
+  {
+    var VsRm = (SzRm*zRm*nRm)/1000;
+    document.getElementById("Vs_Rm_Low").innerHTML = "<i>Vs<sub>Rm</sub> = </i>" + VsRm.toFixed(2) + " м/хв.";
+  }
+  else
+  {
+    document.getElementById("Vs_Rm_Low").innerHTML = "Введіть всі значення!";
   }
 }
 
