@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="icon" type="image/png" sizes="200x200" href="images/fav-icon-200x200.jpg"/>
+    <link rel="icon" type="image/png" sizes="200x200" href="images/fav-icon-200x200.png"/>
     <title>Saw cutting</title>
 </head>
 <body>
@@ -364,6 +364,15 @@
         <p>Введіть n, об/хв:<label><input type="number" id="nRmLow" value="3000"></label></p>
         <button onclick="calcVsRmLow()">Розрахувати</button>
         <p id="Vs_Rm_Low"><i>Vs<sub>Rm</sub> = </i></p>
+    </div>
+    <br>
+    <button class="accordion">Розрахунок <i>V<sub>s</sub></i> за часом різання та довжиною заготівки</button>
+    <div class="panel">
+        <p>Введіть час різання <i>t</i>, сек:<label><input type="number" id="t_riz" value="15"></label></p>
+        <p>Введіть довжину заготівки <i>L</i>, мм:<label><input type="number" id="L_zag" value="2400"></label></p>
+        
+        <button onclick="calcVsT()">Розрахувати</button>
+        <p id="Vs_t"><i>Vs = </i></p>
     </div>
 
     <br>

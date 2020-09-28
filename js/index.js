@@ -153,3 +153,18 @@ function calcZ() {
     document.getElementById("Z").innerHTML = "Введіть всі значення!";
   }
 }
+
+function calcVsT() {
+  var tRiz = document.getElementById("t_riz").value;
+  var Lzag = document.getElementById("L_zag").value;
+
+  if (tRiz && Lzag != 0)
+  {
+    var VsT = Lzag*60/(tRiz*1000);
+    document.getElementById("Vs_t").innerHTML = "<i>Vs = </i>" + VsT.toFixed(2) + " м/хв.";
+  }
+  else 
+  {
+    document.getElementById("Vs_t").innerHTML = "Введіть всі значення!";
+  }
+}
