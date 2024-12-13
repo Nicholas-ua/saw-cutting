@@ -168,3 +168,47 @@ function calcVsT() {
     document.getElementById("Vs_t").innerHTML = "Введіть всі значення!";
   }
 }
+
+//for calculation N
+function calcNp() {
+  var C = 7;
+  var x = 0.4;
+  var y = -0.17;
+  var q = 0.0;
+  var h_N = document.getElementById("h_N").value;
+  var b_N = document.getElementById("b_N").value;
+  var Vs_N = document.getElementById("Vs_N").value;
+  var i_N = document.getElementById("i_N").value;
+  var D_N = document.getElementById("D_N").value;
+  var n_N = document.getElementById("n_N").value;
+  var z_N = document.getElementById("z_N").value;
+  var Ap_N = document.getElementById("Apor_N").value;
+  var Aw_N = document.getElementById("Aw_N").value;
+  var Ar = 1.0;
+  var Ah_N = document.getElementById("Ah_N").value;
+  var Ad_N = document.getElementById("Ad_N").value;
+  var Av_N = document.getElementById("Av_N").value;
+
+  var Apopr_N = (Ap_N*Aw_N*Ar*Ah_N*Ad_N*Av_N).toFixed(2);
+  var Sz_N = Vs_N * 1000/(n_N * z_N);
+  var Kt = C/((Math.pow(Sz_N, x))*Math.pow(h_N, y)*Math.pow(b_N, q));
+
+  var Np = Kt*Apopr_N*h_N*b_N*Vs_N*i_N/60000;
+  
+  document.getElementById("Np").innerHTML = "Потужність на різання Np = " + Np.toFixed(2) + " кВт.";
+  document.getElementById("Kt").innerHTML = "Питома робота різання Kt = " + Kt.toFixed(2) + " Дж/см.куб."
+}
+
+
+function calcVrSz() {
+  var D_N = document.getElementById("D_N").value;
+  var n_N = document.getElementById("n_N").value;
+  var z_N = document.getElementById("z_N").value;
+  var Vs_N = document.getElementById("Vs_N").value;
+
+  var Vr_N = Math.PI * D_N * n_N / 60000;
+  var Sz_N = Vs_N * 1000/(n_N * z_N);
+
+  document.getElementById("Vr_N").innerHTML = "Швидкість різання Vr = " + Vr_N.toFixed(2) + " м/с";
+  document.getElementById("Sz_N").innerHTML = "Подача на зуб становить Sz = " + Sz_N.toFixed(2) + " мм";
+}
