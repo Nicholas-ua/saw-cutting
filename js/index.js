@@ -212,3 +212,10 @@ function calcVrSz() {
   document.getElementById("Vr_N").innerHTML = "Швидкість різання Vr = " + Vr_N.toFixed(2) + " м/с";
   document.getElementById("Sz_N").innerHTML = "Подача на зуб становить Sz = " + Sz_N.toFixed(2) + " мм";
 }
+
+function calcZ_h() {
+  var D_h = document.getElementById("D_h").value;
+  var h_mat = document.getElementById("h_mat").value;
+  var z_h = 1.4142*Math.PI * D_h/ h_mat;
+  document.getElementById("z_h").innerHTML = "Рекомендована кількість зубів пил z = " + z_h.toFixed();
+}
